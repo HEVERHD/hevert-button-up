@@ -1,16 +1,19 @@
 .buttonup-main {
-  width: 40px;
-  height: 40px;
-  background-color: #332e80;
-  border-radius: 50%;
+  width: 40px !important;
+  height: 40px !important;
+  background-color: #332e80 !important;
+  border-radius: 50% !important;
   position: fixed;
-  bottom: 190px;
+  bottom: 279px;
   z-index: 50;
   opacity: 0.6;
   right: 50px;
   cursor: pointer;
   border: 4px solid transparent;
   transition: all 300ms ease;
+  background: url(https://frontier.com.co/scripts/dist/imgs/expandir-icon.svg)
+    center no-repeat;
+  transform: rotate(180deg);
   /* transform: scale(0); */
 }
 
@@ -21,4 +24,12 @@
 
 .buttonup-icon {
   color: white;
+}
+
+.scroll-to-top {
+  background-color: red;
+}
+
+.itgloberspartnercl-button-up-0-x-buttonup-main {
+  background-color: red;
 }

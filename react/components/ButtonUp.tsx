@@ -1,30 +1,47 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useCssHandles } from 'vtex.css-handles'
+import ScrollToTop from 'react-scroll-to-top'
 
 import './styles.css'
 
-type Props = {
-  icon: string
-}
+// type Props = {
+//   icon: string
+// }
 
-function scrollUp() {
-  const currentScroll =
-    document.documentElement.scrollTop || document.body.scrollTop
+// function scrollUp() {
+//   const currentScroll =
+//     document.documentElement.scrollTop || document.body.scrollTop
 
-  if (currentScroll > 0) {
-    window.requestAnimationFrame(scrollUp)
-    window.scrollTo(0, currentScroll - currentScroll / 20)
-  }
-}
+//   if (currentScroll > 0) {
+//     window.requestAnimationFrame(scrollUp)
+//     window.scrollTo(0, currentScroll - currentScroll / 20)
+//   }
+// }
+// // const buttonUp = document.getElementById('button-up')
 
-const ButtonUp = ({ icon }: Props) => {
+// window.onscroll = function () {
+//   const scroll = document.documentElement.scrollTop
+
+//   if (scroll > 100) {
+
+//   }
+// }
+
+const ButtonUp = () => {
   const CSS_HANDLES = ['buttonup-main', 'buttonup-icon']
   const handles = useCssHandles(CSS_HANDLES)
 
   return (
-    <div onClick={scrollUp} className={handles['buttonup-main']}>
-      <img className={handles['button-icon']} src={icon} alt="icon-img" />
+    <div>
+      <ScrollToTop
+        color="white"
+        height="10"
+        svgPath=""
+        smooth
+        className={handles['buttonup-main']}
+      />
+      {/* <img className={handles['button-icon']} src={icon} alt="icon-img" /> */}
     </div>
   )
 }
